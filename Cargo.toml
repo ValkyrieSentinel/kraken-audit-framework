@@ -1,0 +1,15 @@
+[workspace]
+members = [
+    "kraken-core",
+    "kraken-common",
+    "kraken-ui",
+]
+# Ми прибрали "ebpf" з members і додали в exclude
+exclude = ["ebpf"] 
+
+resolver = "2"
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 3

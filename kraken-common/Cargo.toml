@@ -1,0 +1,14 @@
+[package]
+name = "kraken-common"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+network-types = { version = "0.0.5", default-features = false }
+# Додаємо serde сюди з default-features = false
+serde = { version = "1.0", default-features = false, features = ["derive"] }
+aya = { version = "0.11", optional = true, default-features = false }
+
+[features]
+default = []
+user = ["aya"]

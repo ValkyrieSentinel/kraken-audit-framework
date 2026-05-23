@@ -1,0 +1,20 @@
+[package]
+name = "kraken-ebpf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aya-ebpf = "0.1"
+aya-log-ebpf = "0.1"
+network-types = { version = "0.0.5", default-features = false }
+kraken-common = { path = "../kraken-common" }
+
+[lib]
+path = "src/main.rs"    
+crate-type = ["cdylib"]
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 3
+codegen-units = 1
