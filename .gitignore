@@ -1,31 +1,8 @@
-# Cargo (Rust)
-/target
-Cargo.lock
-
-# Binaries
-*.exe
-*.dll
-*.so
-*.dylib
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Environments & Secret Keys
-.env
-.env.*
-!.env.example
-
-# Database data
-/data/
-/logs/
-
-# IDE/Editor folders
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# Project specific
+target/
 *.pdf
+fonts/
+.DS_Store
+.vscode/
+.idea/
+*.o
+*.bpf.o
